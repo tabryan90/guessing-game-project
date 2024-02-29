@@ -20,7 +20,7 @@ function checkGuess(num) {
 }
 
 function askGuess() {
-    rl.question('Enter a guess: ', (ans) => {
+    rl.question('Enter a guess: ', ans => {
         if ( checkGuess(ans) ) {
             console.log('You win!');
             rl.close();
