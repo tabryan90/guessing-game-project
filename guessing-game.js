@@ -16,6 +16,7 @@ function checkGuess(num) {
     } else if ( num == secretNumber ) {
         return true
     }
+
 }
 
 function askGuess() {
