@@ -12,9 +12,8 @@ function asklimit() {
         });
 };
 
-
 function askRange(limit) {
-    // console.log('AskRange - Limit: ' + limit)
+
     rl.question('Enter a min number: ', min => {
         rl.question('Enter a max number: ', max => {
             askGuess(randomInRange(min, max), count, limit)
@@ -31,11 +30,13 @@ function randomInRange(min, max) {
 };
 
 function askGuess(secretNumber, count, limit) {
-    // console.log('AskGuess - Limit: ' + typeof(limit) + '. Count: ' + typeof(count))
+
     if ( count === limit ) {
         console.log(`*Game Over* - No More Guess Available - Play Again`);
         rl.close();
+
     } else if ( count === limit - 1 ) {
+
         console.log(`Last Guess - Guess Wisely`);
 
         rl.question('Enter a guess: ', ans => {
@@ -76,7 +77,4 @@ function checkGuess(num, secretNumber) {
 
 }
 
-// console.log(randomInRange(15, 20))
-// askGuess();
-// askRange();
 asklimit();
